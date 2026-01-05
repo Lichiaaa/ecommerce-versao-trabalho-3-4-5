@@ -6,7 +6,15 @@ import logger from '../lib/logger';
 
 const prisma = new PrismaClient();
 
-// Lembram do God Class q falamos em aula? Este é um exemplo
+class OrderService{
+
+}
+
+class Order{
+
+}
+
+/* Lembram do God Class q falamos em aula? Este é um exemplo
 export class OrderController {
   
   // Método Gigante: Violação de SRP
@@ -104,3 +112,4 @@ export class OrderController {
     }
   }
 }
+*/
