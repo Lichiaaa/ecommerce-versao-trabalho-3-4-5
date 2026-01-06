@@ -5,7 +5,7 @@ export class DigitalProduct extends Product{
         super(id, name, price);
     }
 
-    calculaFrete(): number {
+    calculateFreight(): number {
         return 0;
     }
 }

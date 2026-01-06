@@ -21,5 +21,5 @@ export abstract class Product{
         return this.price;
     }
 
-    abstract calculaFrete(): number;
+    abstract calculateFreight(): number;
 }

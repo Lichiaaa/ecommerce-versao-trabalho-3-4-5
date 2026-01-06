@@ -10,7 +10,7 @@ export class PhysicalProduct extends Product{
         this.dimensions = dimensions;
     }
 
-    calculaFrete(): number {
+    calculateFreight(): number {
         return 10;
     }
 }
