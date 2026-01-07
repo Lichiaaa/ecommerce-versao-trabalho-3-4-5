@@ -3,7 +3,20 @@ import { Product } from './Product';
 type OrderItem = { product: Product; quantity: number };
 
 export class Order{
+    private customer: string
     private itens: OrderItem[] = [];
+
+    constructor(customer: string){
+        this.customer = customer;
+    }
+
+    getCustomer(): string{
+        return this.customer;
+    }
+
+    getItens(): OrderItem[]{
+        return this.itens;
+    }
 
     addItem(product: Product, quantity: number): void {
         if (quantity <= 0) throw new Error('Quantidade inválida');

@@ -8,15 +8,16 @@ export class PrismaOrderRepository implements IOrderRepository {
   async save(order: Order): Promise<void> {
     await this.prisma.order.create({
       data: {
-        status: 'PENDING',
+        customer: order.getCustomer(),
+        items: JSON.stringify(order.getItens()), // vira string
         total: order.calculateTotal(),
-        freight: order.calculateFreight(),
-        subtotal: order.calculateSubtotal(),
+        status: 'PENDING',
       },
     });
   }
 
-  async updateStatus(orderId: string, status: string): Promise<void> {
+
+  async updateStatus(orderId: number, status: string): Promise<void> {
     await this.prisma.order.update({
       where: { id: orderId },
       data: { status },

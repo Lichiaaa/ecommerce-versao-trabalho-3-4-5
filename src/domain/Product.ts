@@ -1,15 +1,15 @@
 export abstract class Product{
-    protected id: string;
+    protected id: number;
     protected name: string;
     protected price: number;
 
-    constructor(id: string, name: string, price: number){
+    constructor(id: number, name: string, price: number){
         this.id = id;
         this.name = name;
         this.price = price;
     }
 
-    getId(): string{
+    getId(): number{
         return this.id;
     }
 
